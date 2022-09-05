@@ -2,5 +2,23 @@ boolean est variable
 float est variable
 integer est variable
 character est variable
+
 variable est  type de données
 constant est type de données 
+
+type de données est algorithmique
+constant est algorithmique
+
+type de donnée composite est alogithmique
+
+fichier est type de donnée composite
+list est type de donnée composite
+
+liste linéere est list
+liste non linéere est list
+
+graphes est  liste non linéere
+arbre est liste non linéere
+
+pile est liste linéere
+arbre est liste non linéere
