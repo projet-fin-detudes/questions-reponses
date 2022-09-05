@@ -1,0 +1,6 @@
+boolean est variable
+float est variable
+integer est variable
+character est variable
+variable est  type de données
+constant est type de données 
