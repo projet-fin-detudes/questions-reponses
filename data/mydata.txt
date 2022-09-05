@@ -1,6 +1,17 @@
-boolean est variable
-float est variable
-integer est variable
-character est variable
-variable est  type de données
-constant est type de données 
+algorithmique
+constant 
+variable
+boolean
+float
+character 
+integer 
+type de donnees
+type de donnee composite
+fichier
+list
+liste lineaire
+liste non lineaire
+graphes
+arbre
+pile
+arbre
