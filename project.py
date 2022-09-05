@@ -344,7 +344,6 @@ df_news.info()
 
 liste_pb = [elt for elt in open_file('./data/mydata.txt').split('\n') if elt]
 df_new = df_news.drop(df_news.index)
-print("t-----------------------------------------------------------------------------------------------------------")
 for i,titre in enumerate(liste_pb):
   keywords = ','.join(SENTENCE_TO_CORRECT_WORDS(titre))
   df_new = add_col(df_new,titre,keywords)
@@ -380,7 +379,6 @@ class HelloWorld(Resource):
     def get(self):
         sentence=request.args.get("sentence")
         result =cosine_similarity_T(10,sentence,df_new ).to_json(orient='records')
-     
         return json.loads(result)
 
 api.add_resource(HelloWorld, '/')
