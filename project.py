@@ -313,7 +313,7 @@ def test(data,sentence,init_=False,mine=True):
 def open_file(textdir):
   found = False
   try:
-    texte = open(textdir,'r',encoding="cp1252").read();found=True
+    texte = open(textdir,'r',encoding="utf-8").read();found=True
     print(1)
   except:pass
   try:
@@ -347,6 +347,7 @@ df_new = df_news.drop(df_news.index)
 for i,titre in enumerate(liste_pb):
   keywords = ','.join(SENTENCE_TO_CORRECT_WORDS(titre))
   df_new = add_col(df_new,titre,keywords)
+
 df_new.head(20)
 
 
@@ -376,12 +377,8 @@ api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
-        try:
-            sentence=request.args.get("sentence")
-            result =cosine_similarity_T(10,sentence,df_new ).to_json(orient='records')
-        except:
-            return json.loads({})
-
+        sentence=request.args.get("sentence")
+        result =cosine_similarity_T(10,sentence,df_new ).to_json(orient='records')
         return json.loads(result)
 
 api.add_resource(HelloWorld, '/')
