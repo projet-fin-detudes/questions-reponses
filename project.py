@@ -376,9 +376,12 @@ api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
-        sentence=request.args.get("sentence")
-        result =cosine_similarity_T(10,sentence,df_new ).to_json(orient='records')
-     
+        try:
+            sentence=request.args.get("sentence")
+            result =cosine_similarity_T(10,sentence,df_new ).to_json(orient='records')
+        except:
+            return json.loads({})
+
         return json.loads(result)
 
 api.add_resource(HelloWorld, '/')
