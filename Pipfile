@@ -10,6 +10,7 @@ sklearn = "*"
 flask = "*"
 flask-cors = "*"
 flask-restful = "*"
+gunicorn = "*"
 
 [dev-packages]
 
